@@ -40,7 +40,6 @@ public class Structures {
             .at("M", BLAST_FURNACE).at("B", "coil", AntimatterAPI.all(BlockCoil.class)).at("C", CASING_HEAT_PROOF, HATCH_ITEM_I, HATCH_ITEM_O, HATCH_FLUID_I, HATCH_FLUID_O, HATCH_ENERGY)
             .build().offset(2, 0).min(12, CASING_HEAT_PROOF).min(1, HATCH_ITEM_I, HATCH_ITEM_O, HATCH_ENERGY)
         );
-        
         MULTI_SMELTER.setStructure(b -> b
             .of("CCC", "CCM", "CCC").of("BBB", "BAB", "BBB").of("CCC", "CCC", "CCC")
             .at("M", MULTI_SMELTER).at("B", "coil", AntimatterAPI.all(BlockCoil.class)).at("C", CASING_HEAT_PROOF, HATCH_ITEM_I, HATCH_ITEM_O, HATCH_ENERGY)
@@ -57,9 +56,12 @@ public class Structures {
             .build().offset(2, -1).min(16, CASING_SOLID_STEEL).min(1, HATCH_ITEM_I, HATCH_ITEM_O, HATCH_ENERGY)
         );
         PYROLYSIS_OVEN.setStructure(b -> b
-            .of("BBBBB", "BCCCB", "BCCCM", "BCCCB", "BBBBB").of("SSSSS", "SAAAS", "SAAAS", "SAAAS", "SSSSS").of(1).of("TTTTT", "TTTTT", "TTYTT", "TTTTT", "TTTTT")
-            .at("M", PYROLYSIS_OVEN).at("S", CASING_ULV).at("C", AntimatterAPI.all(BlockCoil.class)).at("B", CASING_ULV, HATCH_ITEM_O, HATCH_ENERGY).at("T", CASING_ULV, HATCH_ITEM_I).at("Y", HATCH_MUFFLER)
-            .build().offset(4, 0).min(60, CASING_ULV).min(1, HATCH_ITEM_I, HATCH_ITEM_O, HATCH_ENERGY, HATCH_MUFFLER)
+                .of("SCCCS", "SCCCS", "SCCCS")
+                .of("SCCCS", "SAAAM", "SCCCS")
+                .of("SCCCS", "SCCCS", "SCCCS")
+                .at("M", PYROLYSIS_OVEN)
+                .at("C", AntimatterAPI.all(BlockCoil.class)).at("S", CASING_ULV, HATCH_ITEM_O, HATCH_ENERGY, HATCH_ITEM_I, HATCH_FLUID_I, HATCH_FLUID_O)
+                .build().offset(4, 0).min(10, CASING_ULV).min(1, HATCH_ITEM_I, HATCH_ITEM_O, HATCH_ENERGY, HATCH_FLUID_I, HATCH_FLUID_O)
         );
         LARGE_TURBINE.setStructure(b -> b
             .of("CCCC", "CCCC", "CCCC").of("CHHC", "EAAM", "CHHC").of(0)

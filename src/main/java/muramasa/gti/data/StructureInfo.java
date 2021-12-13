@@ -1,6 +1,8 @@
 package muramasa.gti.data;
 
+import muramasa.antimatter.AntimatterAPI;
 import muramasa.antimatter.structure.PatternBuilder;
+import muramasa.gti.block.BlockCoil;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Direction;
 
@@ -44,7 +46,6 @@ public class StructureInfo {
                 .at("C", CASING_FIRE_BRICK.defaultBlockState());
         PRIMITIVE_BLAST_FURNACE.setStructurePattern(builder
                 .at("A", Blocks.AIR.defaultBlockState()).description(PRIMITIVE_BLAST_FURNACE.getDisplayName(PRIMITIVE_BLAST_FURNACE.getFirstTier())).build());
-
         builder = new PatternBuilder()
                 .of("CCC", "CCC", "CCC").of("CCI", "EAM", "CCO").of("CCC", "CCC", "CCC")
                 .at("M", VACUUM_FREEZER, VACUUM_FREEZER.getFirstTier(), Direction.SOUTH)
@@ -62,5 +63,23 @@ public class StructureInfo {
                 .at("O", HATCH_FLUID_O, HATCH_FLUID_O.getFirstTier(), Direction.EAST)
                 .description(LARGE_TURBINE.getDisplayName(LARGE_TURBINE.getFirstTier()));
         LARGE_TURBINE.setStructurePattern(builder.build());
+        builder = new PatternBuilder()
+                .of("SCCCS", "SCCCS", "SCCCS")
+                .of("LCCCF", "EAAAM", "OCCCI")
+                .of("SCCCS", "SCCCS", "SCCCS")
+                .at("M", PYROLYSIS_OVEN, PYROLYSIS_OVEN.getFirstTier(), Direction.SOUTH)
+                .at("S", CASING_ULV.defaultBlockState())
+                .at("E", HATCH_ENERGY,HATCH_ENERGY.getFirstTier(),Direction.NORTH)
+                .at("I", HATCH_ITEM_I,HATCH_ITEM_I.getFirstTier(),Direction.SOUTH)
+                .at("F", HATCH_FLUID_I,HATCH_FLUID_I.getFirstTier(),Direction.SOUTH)
+                .at("O", HATCH_ITEM_O,HATCH_ITEM_O.getFirstTier(),Direction.NORTH)
+                .at("L", HATCH_FLUID_O,HATCH_FLUID_O.getFirstTier(),Direction.NORTH)
+                .description(PYROLYSIS_OVEN.getDisplayName(PYROLYSIS_OVEN.getFirstTier()));
+        PYROLYSIS_OVEN.setStructurePattern(
+                builder.at("C", COIL_CUPRONICKEL.defaultBlockState()).description(COIL_CUPRONICKEL.getDescriptionId()).build(),
+                builder.at("C", COIL_KANTHAL.defaultBlockState()).description(COIL_KANTHAL.getDescriptionId()).build(),
+                builder.at("C", COIL_HSSG.defaultBlockState()).description(COIL_HSSG.getDescriptionId()).build(),
+                builder.at("C", COIL_NAQUADAH.defaultBlockState()).description(COIL_NAQUADAH.getDescriptionId()).build()
+        );
     }
 }
