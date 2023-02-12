@@ -905,7 +905,7 @@ public class GregTechMaterialEvents {
         event.setMaterial(Glauconite).addByProduct(Sodium, Aluminium, AntimatterMaterials.Iron);
         event.setMaterial(Bentonite).addByProduct(Aluminium, Calcium, Magnesium);
         event.setMaterial(Uraninite).addByProduct(Uranium, Thorium, Uranium235);
-        event.setMaterial(Pitchblende).addByProduct(Thorium, Uranium, Lead);
+        event.setMaterial(Pitchblende).addByProduct(Thorium, Uraninite, Lead);
         event.setMaterial(Galena).addByProduct(Sulfur, Silver, Lead);
         event.setMaterial(AntimatterMaterials.Lapis).addByProduct(Calcite, Pyrite);
         event.setMaterial(Pyrite).addByProduct(Sulfur, Phosphorus, AntimatterMaterials.Iron);
