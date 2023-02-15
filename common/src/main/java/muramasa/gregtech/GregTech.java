@@ -129,6 +129,7 @@ public class GregTech extends AntimatterMod {
         loader.accept("extruding", ExtruderLoader::init);
         loader.accept("distilling", DistilleryLoader::init);
         loader.accept("electromagnetic_separating", ElectromagneticSeparatorLoader::init);
+        loader.accept("implosion_compressing", ImplosionCompressor::init);
     }
 
     public static <T> T get(Class<? extends T> clazz, String id) {
