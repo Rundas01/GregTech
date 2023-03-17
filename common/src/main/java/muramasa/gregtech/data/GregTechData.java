@@ -2,6 +2,7 @@ package muramasa.gregtech.data;
 
 import muramasa.antimatter.AntimatterAPI;
 import muramasa.antimatter.AntimatterConfig;
+import muramasa.antimatter.block.BlockBasic;
 import muramasa.antimatter.cover.CoverFactory;
 import muramasa.antimatter.data.AntimatterMaterialTypes;
 import muramasa.antimatter.data.AntimatterMaterials;
@@ -291,6 +292,7 @@ public class GregTechData {
     public static StoneType KIMBERLITE = AntimatterAPI.register(StoneType.class,  new StoneType(Ref.ID, "kimberlite", Kimberlite, new Texture(Ref.ID, "block/stone/kimberlite"), SoundType.STONE, true));
     public static StoneType QUARTZITE = AntimatterAPI.register(StoneType.class, new StoneType(Ref.ID, "quartzite", Quartzite, new Texture(Ref.ID, "block/stone/quartzite"), SoundType.STONE, true));
 
+    public static BlockBasic ReinforcedGlass = new BlockBasic(Ref.ID, "reinforced_glass");
     //public static BlockBasic ANTHRACITE_COAL = new BlockBasic(Ref.ID, "anthracite_coal", new Texture(Ref.ID, "block/basic/anthracite_coal");
     //public static BlockBasic ANTHRACITE_COAL = new BlockBasic(Ref.ID, "anthracite_coal", new Texture(Ref.ID, "block/basic/anthracite_coal");
 
@@ -342,6 +344,7 @@ public class GregTechData {
     public static final BlockCasing CASING_HEAT_PROOF = new BlockCasing(Ref.ID, "casing_heat_proof");
     public static final BlockCasing CASING_FROST_PROOF = new BlockCasing(Ref.ID, "casing_frost_proof");
     public static final BlockCasing CASING_RADIATION_PROOF = new BlockCasing(Ref.ID, "casing_radiation_proof");
+    public static final BlockCasing CASING_ASSEMBLER = new BlockCasing(Ref.ID, "casing_assembler");
     public static final BlockCasing CASING_FIREBOX_BRONZE = new BlockCasing(Ref.ID, "casing_firebox_bronze");
     public static final BlockCasing CASING_FIREBOX_STEEL = new BlockCasing(Ref.ID, "casing_firebox_steel");
     public static final BlockCasing CASING_FIREBOX_TITANIUM = new BlockCasing(Ref.ID, "casing_firebox_titanium");

@@ -8,6 +8,7 @@ import muramasa.antimatter.recipe.map.RecipeBuilder;
 import muramasa.antimatter.recipe.map.RecipeMap;
 import muramasa.gregtech.Ref;
 
+import static muramasa.gregtech.data.Guis.ASSEMBLY_LINE_DISPLAY;
 import static muramasa.gregtech.data.Guis.MULTI_DISPLAY;
 import static muramasa.gregtech.data.RecipeBuilders.*;
 
@@ -147,6 +148,8 @@ public class RecipeMaps {
             new RecipeMap<>(Ref.ID, "distillation", new RecipeBuilder()).setGuiData(MULTI_DISPLAY));
     public static RecipeMap<RecipeBuilder> NUCLEAR = AntimatterAPI.register(RecipeMap.class,
             new RecipeMap<>(Ref.ID, "nuclear", new RecipeBuilder()).setGuiData(MULTI_DISPLAY));
+    public static RecipeMap<RecipeBuilder> COMPLEX_ASSEMBLING = AntimatterAPI.register(RecipeMap.class,
+            new RecipeMap<>(Ref.ID, "complex_assembling", new RecipeBuilder()).setGuiData(ASSEMBLY_LINE_DISPLAY));
     public static RecipeMap<RecipeBuilder> HEAT_EXCHANGING = AntimatterAPI.register(RecipeMap.class,
             new RecipeMap<>(Ref.ID, "heat_exchanging", new RecipeBuilder()).setGuiData(MULTI_DISPLAY));
     static {

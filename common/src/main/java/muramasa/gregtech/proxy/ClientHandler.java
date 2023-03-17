@@ -12,10 +12,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static muramasa.gregtech.data.GregTechData.ReinforcedGlass;
+
 public class ClientHandler {
 
     public static void setup() {
         AntimatterAPI.all(BlockCasing.class, t -> ModelUtils.setRenderLayer(t, RenderType.cutout()));
+        ModelUtils.setRenderLayer(ReinforcedGlass, RenderType.cutout());
         copyProgrammerArtIfMissing();
     }
 

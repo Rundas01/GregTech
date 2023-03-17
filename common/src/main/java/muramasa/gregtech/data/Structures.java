@@ -6,6 +6,7 @@ import muramasa.antimatter.structure.BlockStateElement;
 import muramasa.antimatter.structure.FakeTileElement;
 import muramasa.gregtech.block.BlockCoil;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 
 import static muramasa.gregtech.data.GregTechData.*;
@@ -81,6 +82,22 @@ public class Structures {
                 .at("C", CASING_STAINLESS_STEEL,HATCH_FLUID_O)
                 .build().offset(2,0).min(30, CASING_STAINLESS_STEEL).min(1, HATCH_ENERGY, HATCH_FLUID_I).min(4, HATCH_FLUID_O)
         );
+        ASSEMBLY_LINE.setStructure(b -> b
+                .of("FFFF", "IIII", "FFFF").of("CCCC", "EAAM", "CCCC") .of("AAAA", "CCCO", "AAAA")
+                .at("M", ASSEMBLY_LINE).at("C", CASING_ASSEMBLER)
+                .at("I", HATCH_ITEM_I).at("O", HATCH_ITEM_O).at("E", HATCH_ENERGY)
+                .at("F", HATCH_FLUID_I, CASING_ASSEMBLER)
+                .build().offset(2, -1).min(1, CASING_ASSEMBLER).min(1, HATCH_ITEM_I, HATCH_ITEM_O, HATCH_ENERGY)
+        );
+        /*ASSEMBLY_LINE.setStructure(b -> b
+                .of("FFFFFFFFFFFFFFFF", "IIIIIIIIIIIIIIII", "FFFFFFFFFFFFFFFF")
+                .of("GGGGGGGGGGGGGGGG", "EAAAAAAAAAAAAAAM", "GGGGGGGGGGGGGGGG")
+                .of("AAAAAAAAAAAAAAAA", "CCCCCCCCCCCCCCCO", "AAAAAAAAAAAAAAAA")
+                .at("E", HATCH_ENERGY).at("I",HATCH_ITEM_I.getFirstTier()).at("O",HATCH_ITEM_O).at("C", CASING_ASSEMBLER)
+                .at("C", CASING_ASSEMBLER).at("F", CASING_ASSEMBLER, HATCH_FLUID_I).at("M", ASSEMBLY_LINE).at("G", ReinforcedGlass)
+                .build().offset(2,0)
+                .min(10, CASING_ASSEMBLER).min(1, HATCH_ENERGY).min(4, HATCH_FLUID_I).exact(1,HATCH_ITEM_O).exact(16,HATCH_ITEM_I)
+        );*/
         /*HEAT_EXCHANGER.setStructure(b -> b
                 .of("DDD", "DDM", "DDD").of("CCC","CAC", "CCC").of(1).of(1).of(1)
                 .at("M", HEAT_EXCHANGER).at("D", CASING_TITANIUM,HATCH_ITEM_I, HATCH_FLUID_I, HATCH_HEAT_COPPER)

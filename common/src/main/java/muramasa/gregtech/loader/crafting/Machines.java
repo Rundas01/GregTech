@@ -12,6 +12,7 @@ import muramasa.antimatter.pipe.PipeSize;
 import muramasa.antimatter.pipe.types.FluidPipe;
 import muramasa.gregtech.GregTech;
 import muramasa.gregtech.block.BlockCasing;
+import muramasa.gregtech.data.GregTechData;
 import muramasa.gregtech.data.Materials;
 import muramasa.gregtech.data.TierMaps;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -230,6 +231,14 @@ public class Machines {
                             .put('H', hull)
                             .put('C', circuit)
                             .build(), "POP", "CHC", "POP"));
+
+            add(ASSEMBLY_LINE, tier, (m,item) -> provider.addItemRecipe(output, "machines", "has_motor", provider.hasSafeItem(motor), item,
+                    ImmutableMap.<Character, Object>builder()
+                            .put('A', arm)
+                            .put('K', CASING_ASSEMBLER)
+                            .put('H', hull)
+                            .put('C', circuit)
+                            .build(), "KAK", "CHC", "KAK"));
 
             add(CANNER, tier, (m,item) -> provider.addItemRecipe(output, "machines", "has_motor", provider.hasSafeItem(MotorLV), item,
                     ImmutableMap.<Character, Object>builder()

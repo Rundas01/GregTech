@@ -94,6 +94,7 @@ public class Machines {
     public static MultiMachine DISTLLATION_TOWER = new MultiMachine(Ref.ID, "distillation_tower").setMap(DISTILLATION).setTiers(HV).addFlags(GUI, ITEM, FLUID,ENERGY).setTile(TileEntityDistillationTower::new);
     public static MultiMachine CRACKING_UNIT = new MultiMachine(Ref.ID, "cracking_unit").setMap(CRACKING).setTiers(HV).addFlags(GUI, ITEM, FLUID, ENERGY).setTile(TileEntityOilCrackingUnit::new);
     public static MultiMachine NUCLEAR_REACTOR = new MultiMachine(Ref.ID, "nuclear_reactor").setMap(NUCLEAR).setTiers(EV).addFlags(GUI, ITEM, FLUID, ENERGY).setTile(TileEntityNuclearReactor::new).setAllowVerticalFacing(true);
+    public static MultiMachine ASSEMBLY_LINE = new MultiMachine(Ref.ID, "assembly_line").setMap(COMPLEX_ASSEMBLING).setTiers(EV).addFlags(GUI, ITEM, FLUID, ENERGY).setTile(TileEntityAssemblyLine::new);
 
     public static HatchMachine HATCH_ITEM_I = new HatchMachine(Ref.ID, "hatch_item_input", COVERINPUT).addFlags(GUI, ITEM);
     public static HatchMachine HATCH_ITEM_O = new HatchMachine(Ref.ID, "hatch_item_output", COVEROUTPUT).addFlags(GUI, ITEM);
