@@ -34,6 +34,14 @@ public class Guis {
             .add(FL_OUT, 107, 63).add(FL_OUT, 125, 63).add(FL_OUT, 143, 63));
     public static GuiData MULTI_DISPLAY_COMPACT = new GuiData("antimatter", "multi_display")
             .setSlots(ISlotProvider.DEFAULT().add(MULTI_DISPLAY.getSlots())).setPadding(0, 0, 0, 0);
+    public static GuiData ASSEMBLY_LINE_DISPLAY = new GuiData("antimatter", "assembly_line_display").setSlots(ISlotProvider.DEFAULT()
+            .add(IT_IN, 26, 8).add(IT_IN, 35, 8).add(IT_IN, 53, 8).add(IT_IN, 17, 8)
+            .add(IT_IN, 35, 26).add(IT_IN, 53, 26).add(IT_IN, 35, 26).add(IT_IN, 53, 26)
+            .add(IT_IN, 35, 44).add(IT_IN, 53, 44).add(IT_IN, 35, 44).add(IT_IN, 53, 44)
+            .add(IT_IN, 35, 62).add(IT_IN, 53, 62).add(IT_IN, 35, 62).add(IT_IN, 53, 62)
+            .add(FL_IN, 8, 8).add(FL_IN, 8, 26).add(FL_IN, 8, 44).add(FL_IN, 8, 62)
+            .add(IT_OUT, 137, 35));
+
     public static GuiData BASIC_TANK = new GuiData("gregtech", "basic_tank")
             .setSlots(ISlotProvider.DEFAULT().add(CELL_IN, 8, 17).add(CELL_OUT, 8, 53).add(FL_IN, 55, 43));
 
